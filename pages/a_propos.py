@@ -36,25 +36,7 @@ def render(data_dictionary) -> None:
     with st.expander("Consulter le data dictionary consolide"):
         st.dataframe(data_dictionary, width="stretch", hide_index=True)
 
-    st.markdown("### Limites methodologiques")
-    with st.expander("Consulter les limites de l'etude", expanded=True):
-        st.markdown(
-            "- Aucune source ne renseigne le statut de fonctionnalite operationnelle des ouvrages, "
-            "bien que le schema de la TdE prevoie un champ correspondant non transmis dans l'extrait "
-            "disponible. Aucun taux de fonctionnalite n'est donc calcule ni affiche.\n"
-            "- Les sous-projets COSO et les points TdE couvrent des perimetres geographiques partiels "
-            "et non recoupes ; leur absence dans un canton ne signifie pas l'absence physique "
-            "d'infrastructure.\n"
-            "- 33,5 % des sous-projets COSO presentent une geometrie manquante ou des coordonnees de "
-            "remplissage (0, 0) ; une jointure combinee (spatiale puis attributaire) a ete utilisee "
-            "pour rattacher 83,5 % des sous-projets a un canton.\n"
-            "- Le recensement demographique mobilise date de 2010, tandis que la couche FRI integre "
-            "une population modelisee plus recente ; les deux sources n'ont pas ete reconciliees.\n"
-            "- Les scenarios prospectifs sont des simulations parametriques a hypotheses explicites, "
-            "non des previsions calibrees sur des donnees d'impact observees.\n"
-            "- Les correlations statistiques presentees dans l'EDA de reference ne demontrent aucune "
-            "relation causale."
-        )
+    
 
     st.markdown("### A propos de l'application")
     st.markdown(
@@ -65,9 +47,7 @@ def render(data_dictionary) -> None:
         {AUTHOR_BIO}
 
         Email : [{AUTHOR_EMAIL}](mailto:{AUTHOR_EMAIL})
-        Telephone : {AUTHOR_PHONE}
-        WhatsApp : {AUTHOR_WHATSAPP}
+        
         LinkedIn : [{AUTHOR_LINKEDIN}]({AUTHOR_LINKEDIN})
-        GitHub : [{AUTHOR_GITHUB}]({AUTHOR_GITHUB})
         """
     )
